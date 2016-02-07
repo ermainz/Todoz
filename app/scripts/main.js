@@ -5,7 +5,7 @@ function buildOkGlyphicon() {
 }
 
 function buidlDoneButton() {
-  let button = $('<button>').addClass('pull-right btn btn-xs btn-success hidden');
+  let button = $('<button>').addClass('pull-right btn btn-xs btn-success hidden item-done-button');
   button.append(buildOkGlyphicon());
   return button;
 }
@@ -30,6 +30,10 @@ $( document ).ready(function() {
 
     $('.item-list').on('mouseleave', '.item-list-item', function() {
       $(this).find('button').addClass('hidden');
+    });
+
+    $('.item-list').on('click', '.item-done-button', function() {
+      $(this).closest('.item-list-item').remove();
     });
 
     // add seed items
