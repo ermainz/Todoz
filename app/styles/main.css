@@ -91,3 +91,8 @@ body {
 .container {
   max-width: 960px;
 }
+
+body {
+  margin-bottom: 60px;
+}
+
