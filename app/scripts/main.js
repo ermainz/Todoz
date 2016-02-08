@@ -18,7 +18,8 @@ function addItem(newItem) {
 
 let popoverOptions = {
   container: 'body',
-  content: 'Please provide a value',
+  content: '<p class="text-warning">Did you forget something?</p>',
+  html: true,
   placement: 'left'
 };
 
