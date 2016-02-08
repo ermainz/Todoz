@@ -16,12 +16,27 @@ function addItem(newItem) {
   $('.item-list').prepend(newListItem);
 }
 
+let popoverOptions = {
+  container: 'body',
+  content: 'Please provide a value',
+  placement: 'left'
+};
+
 $( document ).ready(function() {
 
     $('.add-item-button').on('click', function(ev) {
       ev.preventDefault();
       let newItem = $('.new-item-input').val();
-      addItem(newItem);
+      if (newItem === '') {
+        $('.new-item-input').popover(popoverOptions);
+        $('.new-item-input').popover('show');
+        setTimeout(function() {
+          $('.new-item-input').popover('destroy');
+        }, 3000);
+      } else {
+        addItem(newItem);
+        $('.new-item-input').val('');
+      }
     });
 
     $('.item-list').on('mouseenter', '.item-list-item', function() {
