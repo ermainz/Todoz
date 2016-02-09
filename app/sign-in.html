@@ -17,7 +17,7 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/main-page.css">
+    <link rel="stylesheet" href="styles/sign-in.css">
     <!-- endbuild -->
 
   </head>
@@ -29,34 +29,27 @@
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Todoz</a>
+          <a class="navbar-brand" href="index.html">Todoz</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#">About</a></li>
-            <li><a href="sign-in.html">Sign Out</a></li>
         </ul>
       </div>
     </nav>
 
     <div class="container">
-      <div class="new-item-form col-md-6 col-md-offset-3">
-        <div class="input-group">
-          <input type="text" class="form-control new-item-input" placeHolder="Add...">
-          <span class="input-group-btn">
-            <button class="btn btn-primary add-item-button" type="button">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </span>
-        </div>
-      </div>
-      <div class="col-md-6 col-md-offset-3">
-        <ul class="list-group item-list">
-          <li class="list-group-item item-list-item">
-            Pay Rent
-            <button class="pull-right btn btn-xs btn-success hidden item-done-button">
-              <span class="glyphicon glyphicon-ok"></span>
-            </button>
-          </li>
+      <div class="sign-in-form col-md-4 col-md-offset-4">
+        <form>
+          <div class="form-group">
+            <label for="Email" class="sr-only">Email</label>
+            <input type="email" class="form-control" placeholder="Email"></input>
+          </div>
+          <div class="form-group">
+            <label for="Password" class="sr-only">Password</label>
+            <input type="password" class="form-control" placeholder="Password"></input>
+          </div>
+          <button class="btn btn-primary pull-right sign-in-form-button">Sign In</button>
+        </form>
       </div>
     </div>
 
@@ -98,7 +91,7 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/sign-in.js"></script>
     <!-- endbuild -->
   </body>
 </html>
